@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/bongaquino/jenkins-app-pipeline.git'
+                git branch: 'main', url: 'https://github.com/bongaquino/jenkins-app-pipeline.git'
             }
         }
         stage('Install Dependencies') {
