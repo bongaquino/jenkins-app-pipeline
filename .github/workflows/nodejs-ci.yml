@@ -1,0 +1,40 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name if different
+  pull_request:
+    branches:
+      - main  # Change this to your main branch name if different
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Change this to your Node.js version if different
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run tests
+      - name: Run tests
+        run: npm test
+
+      # Optionally, add a build step if needed
+      - name: Build application
+        run: npm run build  # Replace with your build command if different
+
+      # Deploy step (example: echo message)
+      - name: Deploy application
+        run: echo 'Deploying the application...'  # Replace with your deployment steps
