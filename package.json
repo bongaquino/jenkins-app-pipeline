@@ -7,7 +7,7 @@
     "test": "jest",
     "build": "echo 'Building the application...'"
   },
-  "author": "Your Name",
+  "author": "Bong Aquino",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.0.0"
